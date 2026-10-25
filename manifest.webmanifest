@@ -1,0 +1,10 @@
+{
+  "name": "Master — A Monster Rapallo Nuoto",
+  "short_name": "Master",
+  "description": "Allenamenti, calendario e bacheca A Monster Rapallo Nuoto",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7fbff",
+  "theme_color": "#0878f9",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0878f9">
+  <meta name="description" content="Master — A Monster Rapallo Nuoto">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Master — A Monster Rapallo Nuoto</title>
+</head>
+<body>
+  <div class="app-shell">
+    <section id="login-screen" class="login-screen">
+      <div class="login-hero">
+        <div class="brand-mark"><span class="brand-monster">A MONSTER</span><span class="brand-wave">〰〰〰</span><span class="brand-rapallo">RAPALLO NUOTO</span></div>
+        <div class="login-title">MASTER</div>
+        <div class="login-subtitle">A MONSTER RAPALLO NUOTO</div>
+        <h1>Benvenuto!</h1>
+        <p>Accedi come atleta o coach per continuare</p>
+      </div>
+      <div class="login-card">
+        <button class="role-choice athlete-choice" data-role="athlete"><span class="role-icon">🏊</span><span><b>Sono un atleta</b><small>Consulta gli allenamenti<br>e registra i tuoi tempi</small></span><span class="chevron">›</span></button>
+        <button class="role-choice coach-choice" data-role="coach"><span class="role-icon">📣</span><span><b>Sono un coach</b><small>Gestisci allenamenti<br>e comunicazioni</small></span><span class="chevron">›</span></button>
+        <div class="login-divider">oppure accedi con la tua email</div>
+        <label class="input-wrap"><span>✉</span><input id="login-email" type="email" placeholder="Email" autocomplete="email"></label>
+        <label class="input-wrap"><span>♙</span><input id="login-password" type="password" placeholder="Password" autocomplete="current-password"><button type="button" class="show-password" id="show-password">◉</button></label>
+        <button class="primary-button full" id="login-submit">Accedi</button>
+        <p class="login-help">Demo locale: puoi entrare senza password.<br>Autenticazione reale da configurare con Supabase.</p>
+      </div>
+    </section>
+
+    <section id="main-app" class="hidden">
+      <header class="hero-header">
+        <div class="hero-top">
+          <div class="brand-mark compact"><span class="brand-monster">A MONSTER</span><span class="brand-wave">〰〰〰</span><span class="brand-rapallo">RAPALLO NUOTO</span></div>
+          <button class="bell-button" id="notifications-button" aria-label="Notifiche">♟<i></i></button>
+        </div>
+        <div id="hero-copy"><h1>Ciao Marco!</h1><p>Ecco la tua settimana di allenamenti</p></div>
+      </header>
+
+      <main id="screen-content" class="screen-content"></main>
+
+      <nav class="bottom-nav" aria-label="Navigazione principale">
+        <button data-screen="home" class="nav-item active"><span>⌂</span><small>Home</small></button>
+        <button data-screen="workouts" class="nav-item"><span>🏊</span><small>Allenamenti</small></button>
+        <button data-screen="calendar" class="nav-item"><span>▦</span><small>Calendario</small></button>
+        <button data-screen="board" class="nav-item"><span>⚑</span><small>Bacheca</small></button>
+        <button data-screen="profile" class="nav-item"><span>●</span><small>Profilo</small></button>
+      </nav>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
